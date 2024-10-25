@@ -22,7 +22,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'start-simulation=car_simulation.main:main',
+            'run-simulation=car_simulation.main:main',
         ],
     },
     classifiers=[

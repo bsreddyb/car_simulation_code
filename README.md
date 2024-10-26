@@ -20,9 +20,9 @@ pytest for running tests
         cd car-simulation
   ```  
   #2 Create a Virtual Environment (Optional):
-    Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a 
-    virtual environment is advised.
-      ```
+  
+  Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a virtual environment is advised.
+  ```
           # Create a virtual environment (optional)
           python -m venv venv
           # Activate the virtual environment
@@ -30,17 +30,21 @@ pytest for running tests
           venv\Scripts\activate
           # On MacOS/Linux
           source venv/bin/activate
-     ```
+   ```
   #3 Install the package
-Once you are in the virtual or global environment of your choice, you can use pip to install the car_simulation package. Additionally, all required dependencies will be installed:
-     ```
+  
+  Once you are in the virtual or global environment of your choice, you can use pip to install the car_simulation package.
+  Additionally, all required dependencies will be installed:
+  ```
        pip install .
-     ```
+  ```
 ##Usage
+
 Use the following command to launch the simulation:
-    ```
+```
     run-simulation
-    ``~
+```
+
 Set up the field, add cars and launch the simulation by following the on-screen directions.
 
 ##Running Tests

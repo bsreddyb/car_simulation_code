@@ -1,6 +1,6 @@
 ## Auto Driving Car Simulation
 
-# Overview
+## Overview
 A simulation program for grid-based autonomous vehicle driving. In addition to adding vehicles and issuing commands, users may also simulate movement with boundary limits and collision detection.
 
 ## Features
@@ -9,52 +9,46 @@ Add vehicles with distinctive names to a simulation.
 -Launch the simulation and watch the cars' ultimate locations and orientations.
 -Identify and report vehicle-boundary collisions.
 
-##Requirements
+## Requirements
 Python 3.9+
 pytest for running tests
 
-##Installation
-  #Clone the repository:
-    git clone https://github.com/bsreddyb/car_simulation.git
-    cd car-simulation
-  
-  #Create a Virtual Environment (Optional):
-    Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a virtual environment is advised.
-  ```
-      # Create a virtual environment (optional)
-      python -m venv venv
-      # Activate the virtual environment
-      # On Windows
-      venv\Scripts\activate
-      # On MacOS/Linux
-      source venv/bin/activate
+## Installation
+  #1 Clone the repository:
+      ```
+        git clone https://github.com/bsreddyb/car_simulation.git
+        cd car-simulation
+      ```  
+  #2 Create a Virtual Environment (Optional):
+    Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a 
+    virtual environment is advised.
+      ```
+          # Create a virtual environment (optional)
+          python -m venv venv
+          # Activate the virtual environment
+          # On Windows
+          venv\Scripts\activate
+          # On MacOS/Linux
+          source venv/bin/activate
+     ```
+  #3 Install the package
+Once you are in the virtual or global environment of your choice, you can use pip to install the car_simulation package. Additionally, all required dependencies will be installed:
+     ```
+       pip install .
+     ```
+##Usage
+Use the following command to launch the simulation:
+    ```
+    run-simulation
+    ``~
+Set up the field, add cars and launch the simulation by following the on-screen directions.
 
-# Install the package
-pip install .
-
-  ```
-  ##Usage
-  # Create a virtual environment (optional)
-  ```
-  python -m venv venv
-  ```
-  # Activate the virtual environment
-  # On Windows
-  ```
-  venv\Scripts\activate
-  ```
-  # On MacOS/Linux
-  ```
-  source venv/bin/activate
-  ```
-# Install the package
-Installing the auto_driving_car_simulation package with pip is possible once you are in the virtual or global environment of your choice. Additionally, this will install all required dependencies:
-```
-pip install .
-```
-#Running Tests
-
-Project Structure
+##Running Tests
+To run the tests, use pytest:
+    ```
+        python -m pytest    
+    ```
+###Project Structure
 - src/: Contains the simulation source code.
   - car_simulation/
     - main.py: The main entry point for starting the simulation.
@@ -70,7 +64,7 @@ Project Structure
     - utils/
       - logger.py: Sets up logging.
 - tests/: Contains the test cases for the project.
-  - unit/
+  -unit/
     - test_car.py: Tests for the Car class.
     - test_field.py: Tests for the Field class.
     - test_simulation.py: Tests for the Simulation class.
@@ -82,3 +76,7 @@ Project Structure
 - requirements.txt: Lists the dependencies for the project.
 
 Assumptions
+*If an invalid input is entered, the application will prompt for correct inputs.
+*The car's name must be distinct and required.
+*The name of the car must be a string with a minimum of one character.
+*If a new coordinate is detected that is outside the designated field size or collides with another car, stop driving.

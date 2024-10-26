@@ -15,10 +15,10 @@ pytest for running tests
 
 ## Installation
   #1 Clone the repository:
-      ```
+  ```
         git clone https://github.com/bsreddyb/car_simulation.git
         cd car-simulation
-      ```  
+  ```  
   #2 Create a Virtual Environment (Optional):
     Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a 
     virtual environment is advised.

@@ -1,9 +1,13 @@
-#Auto Driving Car Simulation
+## Auto Driving Car Simulation
 
-#Overview
+# Overview
+A simulation program for grid-based autonomous vehicle driving. In addition to adding vehicles and issuing commands, users may also simulate movement with boundary limits and collision detection.
 
-#Features
-
+## Features
+Add vehicles with distinctive names to a simulation.
+-To control each car's motion, set commands for it.
+-Launch the simulation and watch the cars' ultimate locations and orientations.
+-Identify and report vehicle-boundary collisions.
 #Requirements
 
 #Installation

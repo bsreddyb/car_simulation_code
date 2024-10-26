@@ -8,13 +8,50 @@ Add vehicles with distinctive names to a simulation.
 -To control each car's motion, set commands for it.
 -Launch the simulation and watch the cars' ultimate locations and orientations.
 -Identify and report vehicle-boundary collisions.
-#Requirements
 
-#Installation
+##Requirements
+Python 3.9+
+pytest for running tests
 
-#Usage
+##Installation
+  #Clone the repository:
+    git clone https://github.com/bsreddyb/car_simulation.git
+    cd car-simulation
+  
+  #Create a Virtual Environment (Optional):
+    Make sure Python is installed on your computer. To keep dependencies structured and distinct from other projects, a virtual environment is advised.
+  ```
+      # Create a virtual environment (optional)
+      python -m venv venv
+      # Activate the virtual environment
+      # On Windows
+      venv\Scripts\activate
+      # On MacOS/Linux
+      source venv/bin/activate
 
+# Install the package
+pip install .
 
+  ```
+  ##Usage
+  # Create a virtual environment (optional)
+  ```
+  python -m venv venv
+  ```
+  # Activate the virtual environment
+  # On Windows
+  ```
+  venv\Scripts\activate
+  ```
+  # On MacOS/Linux
+  ```
+  source venv/bin/activate
+  ```
+# Install the package
+Installing the auto_driving_car_simulation package with pip is possible once you are in the virtual or global environment of your choice. Additionally, this will install all required dependencies:
+```
+pip install .
+```
 #Running Tests
 
 Project Structure

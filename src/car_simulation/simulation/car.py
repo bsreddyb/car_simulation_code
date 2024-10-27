@@ -2,8 +2,8 @@
 #from simulation.field import Field  # Using absolute import
 from .field import Field  
 from car_simulation.config.config import Config
-from localize.localize import localizations
-from utils.logger import Logger
+from car_simulation.localize.localize import localizations
+from car_simulation.utils.logger import Logger
 
 class Car:
     """
@@ -18,7 +18,8 @@ class Car:
     """
     
     DIRECTIONS = Config.CAR_DIRECTIONS
-
+   
+   
     def __init__(self, name: str, x: int, y: int, direction: str, commands: str):
         """
         A Constructer to initilize all the necessary attributes for the car object.
@@ -39,12 +40,17 @@ class Car:
             valid, message = self.validate_car_name(name, existing_names)
             if not valid:
                 raise ValueError(message)
+             # Validate commands in constructor
+            if not all(command in Config.CAR_COMMANDS for command in commands):
+                raise ValueError("Invalid command found in command string")
+        
         except ValueError as e:
             print(f"Error initializing car: {e}")
             self.active = False  # Mark car as inactive if name is invalid
 
     @staticmethod
     def validate_car_name(name: str, existing_names: list) -> tuple:
+
         """Validate if the car name is valid: non-null, non-empty, 
         alphanumeric, and not a duplicate.
         """
@@ -61,7 +67,14 @@ class Car:
                 return True, "Valid car name."
         except Exception as e:
             return False, f"An error occurred during validation: {e}"
-
+    
+    def set_commands(self, commands: str):
+        """Sets the commands for the car, raising ValueError if invalid."""
+        if not all(c in 'LRF' for c in commands):
+            self.logger.debug("Invalid commands: %s", commands)
+            raise ValueError("Invalid Command")
+        self.commands = commands
+    
     def turn_left(self) -> None:
         """Turn the car left."""
         try:
@@ -112,6 +125,7 @@ class Car:
         if not self.active:
             print(f"{self.name} is inactive and cannot execute commands.")
             return
+        
         command = self.next_command()
         try:
             if command == 'L':
@@ -121,6 +135,11 @@ class Car:
             elif command == 'F':
                 self.move_forward(field)
             self.command_index += 1
+             # Ensure we are within the bounds of the field
+            if not field.within_bounds(self.x, self.y):
+                print(f"Move out of bounds; position not updated.")
+                self.x, self.y = self.previous_position()  # Set back to the previous position
+
         except Exception as e:
             print(f"Error executing command '{command}': {e}")
 

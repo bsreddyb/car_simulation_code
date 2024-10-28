@@ -52,7 +52,7 @@ To run the tests, use pytest:
     ```
         python -m pytest    
     ```
-###Project Structure
+## Project Structure
 - src/: Contains the simulation source code.
   - car_simulation/
     - main.py: The main entry point for starting the simulation.

@@ -73,8 +73,10 @@ To run the tests, use pytest:
     - test_field.py: Tests for the Field class.
     - test_simulation.py: Tests for the Simulation class.
   - integration/
+    - test_car_integraton.py:  Integration tests for the car.py functions.
     - test_main_integration.py: Integration tests for the main.py functions.
-    - test_simulation_integration.py: Integration tests for the Simulation - setup.py: Script for setting up the package.
+    - test_simulation_integration.py: Integration tests for the Simulation
+- setup.py: Script for setting up the package.
 - README.md: Project documentation.
 - MANIFEST.in: Specifies additional files to include in the package.
 - requirements.txt: Lists the dependencies for the project.

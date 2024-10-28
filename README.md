@@ -80,7 +80,7 @@ To run the tests, use pytest:
 - requirements.txt: Lists the dependencies for the project.
 
 ## Assumptions
--If an invalid input is entered, the application will prompt for correct inputs.
--The car's name must be distinct and required.
--The name of the car must be a string with a minimum of one character.
--If a new coordinate is detected that is outside the designated field size or collides with another car, stop driving.
+- If an invalid input is entered, the application will prompt for correct inputs.
+- The car's name must be distinct and required
+- The name of the car must be a string with a minimum of one character.
+- If a new coordinate is detected that is outside the designated field size or collides with another car, stop driving.

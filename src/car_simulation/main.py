@@ -1,13 +1,12 @@
 # main.py
 
-
-from .simulation.simulation import Simulation
-from .simulation.field import Field
-from .simulation.car import Car
+from car_simulation.simulation.simulation import Simulation
+from  car_simulation.simulation.field import Field
+from  car_simulation.simulation.car import Car
 from typing import Tuple
-from .localize.localize import localizations
-from .utils.logger import Logger
-from .config.config import Config
+from  car_simulation.localize.localize import localizations
+from car_simulation.utils.logger import Logger
+from car_simulation.config.config import Config
 
 logger = Logger.setup_logger('MAIN')
 

@@ -1,0 +1,6 @@
+##Static Configurable Variables for dislpay and prompt in each class (In progress)
+##main
+start_message: "Welcome to Auto Driving Car Simulation!"
+#field 
+#car
+#simulation
